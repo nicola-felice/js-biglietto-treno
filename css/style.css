@@ -31,3 +31,8 @@ button {
 
     display: none;
 }
+
+h3 {
+    font-weight: 400;
+    margin-bottom: .5rem;
+}

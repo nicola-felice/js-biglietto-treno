@@ -9,9 +9,17 @@ function calcoloPrezzoBiglietto() {
 
     // va applicato uno sconto del 20% per i minorenni e del 40% per gli over 65.
     if (etaPasseggero < 18) {
+        const valoreSconto = prezzoBiglietto * 0.2;
+        document.getElementById('valoreSconto').innerHTML = `Hai uno sconto di: ${valoreSconto.toFixed(2)} €  (-20%)`;
         prezzoBiglietto *= 0.8;
+
     } else if (etaPasseggero >= 65) {
+        const valoreSconto = prezzoBiglietto * 0.4;
+        document.getElementById('valoreSconto').innerHTML = `Hai uno sconto di: ${valoreSconto.toFixed(2)} €  (-40%)`;
         prezzoBiglietto *= 0.6;
+
+    } else {
+        document.getElementById('valoreSconto').innerHTML = ``;
     }
 
     // L'output del prezzo finale
